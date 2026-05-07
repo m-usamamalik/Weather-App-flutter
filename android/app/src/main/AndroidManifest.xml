@@ -1,4 +1,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Required for all HTTP/HTTPS network calls (JSONPlaceholder API,
+         Open-Meteo weather API, Unsplash image CDN).
+         Without this, Android blocks all socket connections. -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <!-- Needed by connectivity_plus to detect Wi-Fi vs mobile data. -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
     <application
         android:label="smart_travel_companion"
         android:name="${applicationName}"
